@@ -1,7 +1,7 @@
 # Start 🎒
 This is what I use to start my web applications. It's a fairly simple Webpack project structure that can be easily extended and personalized. Simplicity is the goal. Just plug your view library into the configs and build something.
 
-#### Start development server:
+#### Start:
 
 ```bash
 npm run start
