@@ -3,6 +3,7 @@ const merge = require('webpack-merge');
 
 // plugins
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const WorkerPlugin = require('worker-plugin');
 
 // utils
 const common = require('./common');
@@ -25,6 +26,7 @@ module.exports = merge.smart(common, {
         new HtmlWebpackPlugin({
             inject: true,
             template: paths.APP_HTML
-        })
+        }),
+        new WorkerPlugin()
     ]
 });

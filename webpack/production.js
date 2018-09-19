@@ -8,6 +8,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const SizePlugin = require('size-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const WorkerPlugin = require('worker-plugin');
 
 // utils
 const common = require('./common');
@@ -37,6 +38,7 @@ module.exports = merge.smart(common, {
             inject: true,
             template: paths.APP_HTML
         }),
+        new WorkerPlugin(),
         new BundleAnalyzerPlugin({
             openAnalyzer: false,
             analyzerMode: 'static',
