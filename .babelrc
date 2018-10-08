@@ -6,11 +6,6 @@
                 "useBuiltIns": "usage"
             }
         ],
-        [
-            "@babel/preset-react",
-            {
-                "pragma": "h"
-            }
-        ]
+        ["@babel/preset-react"]
     ]
 }
