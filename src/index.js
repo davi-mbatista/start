@@ -1,5 +1,7 @@
-import { h, render } from 'preact';
+import React from 'react';
+import { render } from 'react-dom';
 
 import './style.css';
 
-render(<div className="splash">Preact</div>, document.body);
+const root = document.querySelector('#root');
+render(<div className="splash">React</div>, root);
