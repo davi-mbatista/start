@@ -8,6 +8,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const SizePlugin = require('size-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 
 // utils
 const common = require('./common');
@@ -36,6 +37,9 @@ module.exports = merge.smart(common, {
         new HtmlWebpackPlugin({
             inject: true,
             template: paths.APP_HTML
+        }),
+        new ScriptExtHtmlWebpackPlugin({
+            defaultAttribute: 'async'
         }),
         new BundleAnalyzerPlugin({
             openAnalyzer: false,
