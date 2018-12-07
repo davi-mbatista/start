@@ -13,5 +13,8 @@
             "pragma": "h",
             "version": "latest"
         }
+    },
+    "rules": {
+        "no-console": "off"
     }
 }
