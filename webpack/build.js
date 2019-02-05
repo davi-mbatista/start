@@ -1,5 +1,6 @@
 // libs
 const merge = require('webpack-merge');
+const webpack = require('webpack');
 
 // plugins
 const CleanWebpackPlugin = require('clean-webpack-plugin');
@@ -12,6 +13,7 @@ const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 
 // utils
 const common = require('./common');
+const environment = require('./utils/environment');
 const paths = require('./utils/paths');
 
 module.exports = merge.smart(common, {
@@ -22,11 +24,23 @@ module.exports = merge.smart(common, {
     },
     output: {
         filename: 'static/js/[name].[chunkhash:8].js',
-        chunkFilename: 'static/js/[name].chunk.[chunkhash:8].js',
+        chunkFilename: 'static/js/[name].chunk-[id].[chunkhash:8].js',
         path: paths.APP_BUILD_SRC,
         publicPath: paths.PUBLIC_PATH
     },
+    module: {
+        rules: [
+            {
+                test: /\.css$/,
+                exclude: /(node_modules)/,
+                use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader']
+            }
+        ]
+    },
     plugins: [
+        new webpack.DefinePlugin({
+            'process.env': environment.production
+        }),
         new CleanWebpackPlugin(['build'], {
             root: paths.ROOT
         }),
@@ -35,8 +49,15 @@ module.exports = merge.smart(common, {
             chunkFilename: 'static/css/[id].[chunkhash:8].css'
         }),
         new HtmlWebpackPlugin({
-            inject: true,
-            template: paths.APP_HTML
+            inject: 'body',
+            template: paths.APP_HTML,
+            minify: {
+                collapseWhitespace: true,
+                removeScriptTypeAttributes: true,
+                removeStyleLinkTypeAttributes: true,
+                removeRedundantAttributes: true,
+                removeComments: true
+            }
         }),
         new ScriptExtHtmlWebpackPlugin({
             defaultAttribute: 'async'
@@ -44,6 +65,7 @@ module.exports = merge.smart(common, {
         new BundleAnalyzerPlugin({
             openAnalyzer: false,
             analyzerMode: 'static',
+            defaultSizes: 'gzip',
             reportFilename: 'static/report/index.html',
             generateStatsFile: true,
             statsFilename: 'static/report/stats.json',
