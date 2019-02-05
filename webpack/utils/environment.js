@@ -14,10 +14,10 @@ const common = {
 module.exports = {
     development: {
         ...common,
-        NODE_ENV: 'development'
+        NODE_ENV: stringify('development')
     },
     production: {
         ...common,
-        NODE_ENV: 'production'
+        NODE_ENV: stringify('production')
     }
 };
