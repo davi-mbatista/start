@@ -1,0 +1,14 @@
+.splash {
+    display: flex;
+
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    color: rgb(37, 37, 37);
+
+    font-size: 150%;
+}

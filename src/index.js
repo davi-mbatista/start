@@ -1,9 +1,9 @@
 import { html, render } from 'lit-html';
 
-const hello = name => {
-    return html`
-        <p>Hello ${name}.</p>
-    `;
-};
+import './style.css';
 
-render(hello('World'), document.body);
+const hello = () => html`
+    <div class="splash">Start here - lit-html</div>
+`;
+
+render(hello(), document.body);
