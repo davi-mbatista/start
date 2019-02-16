@@ -2,14 +2,13 @@
     display: flex;
 
     justify-content: center;
+    align-content: center;
     align-items: center;
 
     width: 100%;
     height: 100%;
 
-    color: #61dafb;
-    background-color: #282c34;
+    color: rgb(37, 37, 37);
 
-    font-size: 2.5rem;
-    font-weight: 300;
+    font-size: 150%;
 }
