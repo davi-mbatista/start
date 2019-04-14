@@ -17,6 +17,7 @@ module.exports = merge.smart(common, {
         app: paths.APP_ENTRY_POINT
     },
     devServer: server,
+    stats: 'minimal',
     output: {
         filename: '[name].js',
         chunkFilename: '[name].chunk.js',
