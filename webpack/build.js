@@ -41,9 +41,7 @@ module.exports = merge.smart(common, {
         new webpack.DefinePlugin({
             'process.env': environment.production
         }),
-        new CleanWebpackPlugin(['build'], {
-            root: paths.ROOT
-        }),
+        new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: 'static/css/[name].[chunkhash:8].css',
             chunkFilename: 'static/css/[id].[chunkhash:8].css'
