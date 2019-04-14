@@ -42,7 +42,6 @@
         "webpack-merge": "4.2.1"
     },
     "dependencies": {
-        "@babel/polyfill": "7.4.3",
         "preact": "8.4.2"
     }
 }
