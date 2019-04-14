@@ -40,7 +40,6 @@
         "webpack-merge": "4.2.1"
     },
     "dependencies": {
-        "@babel/polyfill": "7.4.3",
         "lit-html": "1.0.0"
     }
 }
