@@ -1,4 +1,5 @@
 {
+    "extends": ["config:js-app"],
     "baseBranches": [
         "next",
         "framework/react",
