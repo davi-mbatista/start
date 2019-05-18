@@ -1,6 +1,8 @@
 .splash {
     display: flex;
 
+    flex-direction: column;
+
     justify-content: center;
     align-content: center;
     align-items: center;
@@ -8,7 +10,46 @@
     width: 100%;
     height: 100%;
 
-    color: rgb(37, 37, 37);
+    font-size: 1rem;
 
-    font-size: 150%;
+    color: rgb(29, 29, 29);
+}
+
+.lit-logo {
+    position: relative;
+
+    margin: 0.5em 0;
+    padding: 0.05em 0.25em;
+
+    /* margin-bottom: -14px; */
+    /* padding-right: 5%; */
+
+    font-size: 60px;
+
+    background-color: #ff2f2f;
+    color: white;
+
+    font-weight: 400;
+    line-height: 1.3em;
+}
+
+.lit-logo::after {
+    content: '';
+
+    position: absolute;
+    left: 0.25em;
+    bottom: 0.2em;
+
+    width: 48px;
+    height: 2px;
+    background-color: white;
+}
+
+mark {
+    padding: 0.25em;
+
+    border-radius: 0.35em;
+
+    background-color: #ff2f2f;
+    color: white;
 }
