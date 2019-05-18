@@ -1,8 +1,5 @@
-import './style.css';
+import Hello from './Hello';
 
-const splashElement = document.createElement('div');
-
-splashElement.className = 'splash';
-splashElement.innerHTML = 'Start here';
-
-document.body.appendChild(splashElement);
+export default new Hello({
+    target: document.body
+});
