@@ -1,5 +1,9 @@
 {
-  "extends": [
-    "config:base"
-  ]
+    "baseBranches": [
+        "next",
+        "framework/react",
+        "framework/preact",
+        "framework/lit",
+        "framework/svelte"
+    ]
 }
