@@ -5,5 +5,6 @@
         "framework/preact",
         "framework/lit",
         "framework/svelte"
-    ]
+    ],
+    "labels": ["renovate"]
 }
