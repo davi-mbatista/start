@@ -34,7 +34,7 @@
         "size-plugin": "1.2.0",
         "style-loader": "0.23.1",
         "svelte-loader": "2.13.4",
-        "webpack": "4.32.1",
+        "webpack": "4.32.2",
         "webpack-bundle-analyzer": "3.3.2",
         "webpack-cli": "3.3.2",
         "webpack-dev-server": "3.4.1",
