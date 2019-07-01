@@ -1,4 +1,5 @@
 # Start 🎒
+[![CircleCI](https://circleci.com/gh/davi-mbatista/start/tree/framework%2Flit.svg?style=svg)](https://circleci.com/gh/davi-mbatista/start/tree/framework%2Flit)
 
 This is what I use to start my web applications. It's a fairly simple Webpack project structure that can be easily extended and customized. Simplicity is the goal here. Just plug your view library into the configs and build something.
 
