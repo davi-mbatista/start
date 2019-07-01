@@ -4,6 +4,10 @@ jobs:
     context: test
     docker:
       - image: circleci/node:latest
+    branches:
+      only:
+        - next
+        - /framework/*
     working_directory: ~/repo
     steps:
       - checkout
