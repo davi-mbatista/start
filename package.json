@@ -1,7 +1,7 @@
 {
     "name": "start",
     "version": "0.0.1",
-    "description": "A way to start web applications.",
+    "description": "A way to start web applications",
     "private": true,
     "license": "MIT",
     "author": "@davi-mbatista",
