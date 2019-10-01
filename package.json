@@ -34,7 +34,7 @@
         "size-plugin": "2.0.0",
         "style-loader": "1.0.0",
         "webpack": "4.41.0",
-        "webpack-bundle-analyzer": "3.5.1",
+        "webpack-bundle-analyzer": "3.5.2",
         "webpack-cli": "3.3.7",
         "webpack-dev-server": "3.8.1",
         "webpack-merge": "4.2.1"
