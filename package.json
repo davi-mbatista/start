@@ -12,7 +12,7 @@
     },
     "devDependencies": {
         "@babel/cli": "7.6.2",
-        "@babel/core": "7.6.2",
+        "@babel/core": "7.6.4",
         "@babel/preset-env": "7.6.2",
         "babel-eslint": "10.0.2",
         "babel-loader": "8.0.6",
