@@ -41,6 +41,6 @@
         "webpack-merge": "4.2.2"
     },
     "dependencies": {
-        "svelte": "3.16.1"
+        "svelte": "3.16.3"
     }
 }
