@@ -35,3 +35,10 @@ jobs:
                       - node_modules
                   key: v1-dependencies-{{ checksum "package.json" }}
             - run: npm run build
+
+workflows:
+    version: 2
+    fun_and_games:
+        jobs:
+            - build
+            - test

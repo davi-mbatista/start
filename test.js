@@ -10,19 +10,19 @@ const server = http.createServer((request, response) => {
     });
 });
 
-server.listen(7000, () => {
+server.listen(7000, async () => {
     console.log('Running at http://localhost:7000');
-    (async () => {
-        const browser = await puppeteer.launch();
-        const page = await browser.newPage();
 
-        console.log('Running puppeteer...');
+    const browser = await puppeteer.launch();
+    const page = await browser.newPage();
 
-        await page.setViewport({ width: 1280, height: 800 });
-        await page.goto('http://localhost:7000');
-        await page.screenshot({ path: './test.png', fullPage: true });
-        await browser.close();
-        await server.close();
-        console.log('Done.');
-    })();
+    console.log('Running puppeteer...');
+
+    await page.setViewport({ width: 1280, height: 800 });
+    await page.goto('http://localhost:7000');
+    await page.screenshot({ path: 'test.png', fullPage: true });
+    await browser.close();
+    await server.close();
+
+    console.log('Done.');
 });
