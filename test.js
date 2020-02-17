@@ -23,6 +23,7 @@ server.listen(7000, () => {
         await page.screenshot({ path: './test.png', fullPage: true });
         await browser.close();
         await server.close();
+        
         console.log('Done.');
     })();
 });
