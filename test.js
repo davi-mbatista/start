@@ -11,7 +11,7 @@ const server = http.createServer((request, response) => {
 });
 
 server.listen(7000, async () => {
-    console.log('Running at http://localhost:7000');
+    console.log('Running at http://localhost:7000 ...');
 
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
