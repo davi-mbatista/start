@@ -1,8 +1,6 @@
-// libs
 const path = require('path');
 const fs = require('fs');
 
-// Get node's process root
 const ROOT = fs.realpathSync(process.cwd());
 
 const resolveTo = (relativePath = '') => path.resolve(ROOT, relativePath);
