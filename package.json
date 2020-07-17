@@ -6,9 +6,8 @@
     "license": "MIT",
     "author": "@davi-mbatista",
     "scripts": {
-        "start": "webpack-dev-server --config webpack/development.js",
-        "build": "webpack --config webpack/build.js",
-        "precommit": "lint-staged"
+        "start": "webpack-dev-server --config webpack/start.js",
+        "build": "webpack --config webpack/build.js"
     },
     "devDependencies": {
         "@babel/cli": "7.10.5",
@@ -21,14 +20,13 @@
         "copy-webpack-plugin": "6.0.3",
         "css-loader": "3.6.0",
         "cssnano": "4.1.10",
-        "eslint": "^7.4.0",
+        "eslint": "7.4.0",
         "eslint-loader": "4.0.2",
         "eslint-plugin-react": "7.20.3",
         "file-loader": "6.0.0",
         "html-webpack-plugin": "4.3.0",
-        "husky": "4.2.5",
-        "lint-staged": "10.2.11",
         "mini-css-extract-plugin": "0.9.0",
+        "optimize-css-assets-webpack-plugin": "5.0.3",
         "postcss-loader": "3.0.0",
         "postcss-preset-env": "6.7.0",
         "prettier": "2.0.5",
@@ -42,8 +40,62 @@
         "webpack-merge": "5.0.9"
     },
     "dependencies": {
-        "prop-types": "15.7.2",
         "react": "16.13.1",
         "react-dom": "16.13.1"
+    },
+    "babel": {
+        "presets": [
+            "@babel/env",
+            "@babel/preset-react"
+        ]
+    },
+    "browserslist": [
+        "last 3 chrome version",
+        "last 3 firefox version",
+        "last 3 safari version",
+        "last 3 ios_saf version"
+    ],
+    "postcss": {
+        "plugins": {
+            "postcss-preset-env": {},
+            "cssnano": {}
+        }
+    },
+    "eslintConfig": {
+        "parser": "babel-eslint",
+        "env": {
+            "browser": true,
+            "node": true,
+            "es6": true,
+            "worker": true,
+            "serviceworker": true
+        },
+        "extends": [
+            "eslint:recommended",
+            "plugin:react/recommended"
+        ],
+        "settings": {
+            "react": {
+                "version": "latest"
+            }
+        },
+        "rules": {
+            "no-console": "off"
+        }
+    },
+    "eslintIgnore": [
+        "build",
+        "node_modules"
+    ],
+    "prettier": {
+        "printWidth": 100,
+        "tabWidth": 4,
+        "useTabs": false,
+        "semi": true,
+        "singleQuote": true,
+        "trailingComma": "none",
+        "bracketSpacing": true,
+        "jsxBracketSameLine": false,
+        "arrowParens": "avoid"
     }
 }
