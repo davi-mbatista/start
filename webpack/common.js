@@ -1,4 +1,9 @@
+const { paths, plugins } = require('./utils');
+
 module.exports = {
+    entry: {
+        app: paths.APP_ENTRY_POINT
+    },
     module: {
         rules: [
             {
@@ -13,5 +18,6 @@ module.exports = {
                 loader: 'babel-loader'
             }
         ]
-    }
+    },
+    plugins: plugins.common
 };
