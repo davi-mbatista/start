@@ -35,7 +35,7 @@
         "webpack-cli": "3.3.12",
         "webpack-dev-server": "3.11.0",
         "webpack-merge": "5.1.4",
-        "optimize-css-assets-webpack-plugin": "5.0.3"
+        "optimize-css-assets-webpack-plugin": "5.0.4"
     },
     "dependencies": {
         "svelte": "3.24.1"
