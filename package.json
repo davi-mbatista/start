@@ -21,7 +21,7 @@
         "cssnano": "4.1.10",
         "eslint": "7.10.0",
         "eslint-loader": "4.0.2",
-        "file-loader": "6.1.0",
+        "file-loader": "6.1.1",
         "html-webpack-plugin": "4.5.0",
         "mini-css-extract-plugin": "0.12.0",
         "postcss-loader": "4.0.3",
