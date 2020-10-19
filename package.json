@@ -39,7 +39,7 @@
         "webpack-merge": "5.2.0"
     },
     "dependencies": {
-        "preact": "10.5.4"
+        "preact": "10.5.5"
     },
     "babel": {
         "presets": [
