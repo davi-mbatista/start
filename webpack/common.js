@@ -1,3 +1,4 @@
+const path = require('path');
 const { paths, plugins } = require('./utils');
 
 module.exports = {
@@ -13,15 +14,9 @@ module.exports = {
                 loader: 'eslint-loader'
             },
             {
-                test: /\.svelte$/,
+                test: /\.(html|svelte)$/,
                 exclude: /node_modules/,
-                use: {
-                    loader: 'svelte-loader',
-                    options: {
-                        emitCss: true,
-                        hotReload: true
-                    }
-                }
+                use: 'svelte-loader'
             },
             {
                 test: /\.js$/,
@@ -31,7 +26,11 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: ['.mjs', '.js', '.svelte']
+        alias: {
+            svelte: path.resolve('node_modules', 'svelte')
+        },
+        extensions: ['.mjs', '.js', '.svelte'],
+        mainFields: ['svelte', 'browser', 'module', 'main']
     },
     plugins: plugins.common
 };
