@@ -34,7 +34,7 @@
         "svelte-loader": "2.13.6",
         "webpack": "5.10.3",
         "webpack-cli": "4.2.0",
-        "webpack-dev-server": "3.11.0",
+        "webpack-dev-server": "3.11.1",
         "webpack-merge": "5.7.2"
     },
     "dependencies": {
