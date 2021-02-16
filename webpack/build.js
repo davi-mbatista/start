@@ -17,7 +17,7 @@ module.exports = merge(common, {
             {
                 test: /\.css$/,
                 exclude: /(node_modules)/,
-                use: [require('mini-css-extract-plugin').loader, 'css-loader', 'postcss-loader']
+                use: [require('mini-css-extract-plugin').loader, 'css-loader']
             }
         ]
     },
