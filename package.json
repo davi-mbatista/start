@@ -30,7 +30,7 @@
         "webpack-merge": "5.7.3"
     },
     "dependencies": {
-        "lit-html": "1.4.0"
+        "lit-html": "1.4.1"
     },
     "babel": {
         "presets": [
